@@ -9,9 +9,7 @@
 
 <div class="row">
 
-
-  <div class="col md-6">
-  <h1>Business</h1>
+  <h1>Business..<br></h1>
   {% for source in business %}
   <div class="col-md-6">
   <div class="card mb-4 box-shadow">
@@ -29,9 +27,7 @@
   {% endfor %}
 
 
-
-<div class="col md-6">
-  <h1>entertainment</h1>
+  <h1>entertainment..<br></h1>
   {% for source in entertainment %}
   <div class="col-md-6">
     <div class="card mb-4 box-shadow">
@@ -50,13 +46,14 @@
 </div>
 
 
-  </div>
 
+  
 
-  <div class="col md-6">
+<div class="row">
+
   <h1>Health</h1>
   {% for source in health %}
-  <div class="col-md-4">
+  <div class="col md-6">
       <div class="card mb-4 box-shadow">
           <a href="/articles/{{source.id}}">{{source.name}}</a>
         <div class="card-body">
@@ -73,8 +70,9 @@
 
 
   <h1>General</h1>
+  <div>
   {% for source in general %}
-  <div class="col-md-4">
+  <div class="col-md-6">
   <div class="card mb-4 box-shadow">
     <a href="/articles/{{source.id}}">{{source.name}}</a>
   <div class="card-body">
@@ -88,6 +86,33 @@
   </div>
   </div>
   {% endfor %}
+</div>
+
+</div>
+
+
+<div class="row">
+
+
+  <h1>Science</h1>
+  <div>
+  {% for source in science %}
+  <div class="col-md-4">
+  <div class="card mb-4 box-shadow">
+      <a href="/articles/{{source.id}}">{{source.name}}</a>
+    <div class="card-body">
+      <p class="card-text small"> {{source.description}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  {% endfor %}
+</div>
+
 
   <h1>Science</h1>
   {% for source in science %}
@@ -106,23 +131,7 @@
   </div>
   {% endfor %}
 
-
-  <h1>Science</h1>
-  {% for source in science %}
-  <div class="col-md-4">
-  <div class="card mb-4 box-shadow">
-      <a href="/articles/{{source.id}}">{{source.name}}</a>
-    <div class="card-body">
-      <p class="card-text small"> {{source.description}}</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  {% endfor %}
+</div>
 
 
 
