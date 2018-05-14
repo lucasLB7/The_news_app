@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>{{title}}</title>
+        {% else %}
+        <title>HOME- Welcome to the news Daily.</title>
+        {% endif %}
+    </head>
+    <body>
+
+      <div class="header heade-main">
+        <h1>NEWS API SEARCH<h1>
+
+      <div class="business">
+        <h1>Business</h1>
+          {% for source in business %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+      <div class="entertainment">
+        <h1>entertainment</h1>
+          {% for source in entertainment %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+      <div class="general">
+        <h1>general</h1>
+          {% for source in general %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+      <div class="health">
+        <h1>health</h1>
+          {% for source in health %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+      <div class="science">
+        <h1>science</h1>
+          {% for source in science %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+
+      <div class="sports">
+        <h1>sports</h1>
+          {% for source in sports %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+
+      <div class="technology">
+        <h1>technology</h1>
+          {% for source in technology %}
+          <div class="well align-center">
+          <a href="/articles/{{source.id}}">{{source.name}}</a>
+          <p>{{source.description}}</p>
+            </div>
+          {% endfor %}
+      </div>
+      </div>
+
+
+    </body>
+</html>
