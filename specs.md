@@ -14,3 +14,18 @@ Requests are made to news api with a key that is located on the heroku server (t
 
 
 
+1. Requests:
+
+The requests are key for the parsing of the data from tthe json files:
+
+```
+def configure_requests(app):
+    global api_key , news_url, news_article
+    api_key = app.config['NEWS_API_KEY']
+    news_url = app.config['NEWS_SOURCES_URL']
+    news_article = app.config['NEWS_ARTICLES_URL']
+```
+__In the above example we create the configure_request function that takes in the app as argument.__
+
+The purpose of this function is to store & retreive data from the api key & url origin.
+
