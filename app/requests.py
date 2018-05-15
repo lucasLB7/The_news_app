@@ -14,17 +14,7 @@ def configure_requests(app):
     news_url = app.config['NEWS_SOURCES_URL']
     news_article = app.config['NEWS_ARTICLES_URL']
 
-def get_sources(category):
-    get_news_url = news_url.format(category,api_key)
-    print(get_news_url)
-    with urllib.request.urlopen(get_news_url) as url:
-        get_news_data = url.read()
-        get_news_response = json.loads(get_news_data)
-        news_results = None
-    if get_news_response['sources']:
-        news_result_list = get_news_response['sources']
-        news_results = process_sources(news_result_list)
-    return news_results
+
 
 def process_sources(news_result_list):
     source_results = []
