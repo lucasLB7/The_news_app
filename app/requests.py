@@ -9,7 +9,7 @@ news_url = None
 news_article = None
 
 def configure_requests(app):
-    global api_key , news_url, articles_url
+    global api_key , news_url, news_article
     api_key = app.config['NEWS_API_KEY']
     news_url = app.config['NEWS_SOURCES_URL']
     news_article = app.config['NEWS_ARTICLES_URL']
@@ -42,7 +42,6 @@ def process_sources(news_result_list):
 
 def get_articles(source_id):
         get_article_url = news_article.format(source_id,api_key)
-        print(get_article_url)
         with urllib.request.urlopen(get_article_url) as url:
             get_news_data_art = url.read()
             get_news_response_art = json.loads(get_news_data_art)
