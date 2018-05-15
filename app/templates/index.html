@@ -9,6 +9,23 @@
 
 <div class="row">
 
+    <div class="col-md-6">
+  <h1>Business..</h1>
+  <div>
+  {% for source in business %}
+  <div class="card mb-4 box-shadow"></div>
+      <a href="/articles/{{source.id}}">{{source.name}}</a>
+    <div class="card-body">
+      <p class="card-text small"> {{source.description}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
 
 
   <div class="col-md-6">
