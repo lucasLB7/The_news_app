@@ -53,18 +53,4 @@ def get_articles(source_id):
             news_results_art = process_articles(news_result_list_art)
         return news_results_art
 
-def process_articles(news_result_list_art):
-    article_results = []
-    for article in news_result_list_art:
 
-        author = article.get('author')
-        title= article.get('title')
-        description=article.get('description')
-        url=article.get('url')
-        url_image=article.get('urlToImage')
-
-        if title:
-            news_object = Article(author,title, description , url, url_image)
-
-            article_results.append(news_object)
-    return article_results
