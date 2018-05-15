@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html   >
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title>{{title}}</title>
-        {% else %}
-        <title>HOME- Welcome to the news Daily.</title>
-        {% endif %}
-    </head>
-    <body>
-      <h1>{{title}}</h1>
-      <div class="articles">
-          {% for article in articles %}
-          <p>{{article.title}}</p>
-          <p>{{article.description}}</p>
-          {% endfor %}
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+
+{% block content %}
+
+
+
+
+<div class="col-md-6">
+    <h1>Bullet point articles</h1>
+    <div>
+    {% for article in articles %}
+    <div class="card mb-4 box-shadow"></div>
+        <a href="{{article.url}}">{{article.title}}</a>
+        <img class="img-thumbnail" src="{{article.url_image}}" alt="">
+      <div class="card-body">
+        <p class="card-text small"> {{article.description}}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+          </div>
+        </div>
       </div>
-      </body>
-</html>
+      {% endfor %}
+    </div>
+    </div>
+
+
+{% endblock %}
