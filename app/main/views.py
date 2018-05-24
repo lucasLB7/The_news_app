@@ -8,9 +8,10 @@ from ..requests import get_sources,get_articles
 
 @main.route('/articles/<article_id>')
 def articles(article_id):
-    articles=get_articles(article_id)
-    print(articles)
-    title=article_id.replace("-"," ")
+
+    articles = get_articles(article_id)
+    title = article_id.replace("-"," ")
+
     return render_template('articles.html',articles=articles,title=title)
 
 
